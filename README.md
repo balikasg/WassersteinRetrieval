@@ -37,4 +37,9 @@ In case you use the model or the provided code, please cite our paper:
 
 
 # Timings
+The code can be parallelized easily as one needs to calculate the distance of each query document with every document in the set of available documents.
+We have used `pathos` to parellize the calculations in the level of queries. Having *N* queries will send them to the available cores. In the figure below we illustrate the performance 
+benefits when parallelizing the example of the section "Running the code", using 1,2,6,10,14,18 and 22 cores in a Intel(R) Xeon(R) CPU E5-2643 v3 @ 3.40GHz machine. 
+Notice that `Entro_Wass` needs more time, but the difference is small when having more than 10 cores available. Also,`Entro_Wass` can be implemented with GPUs, but we did not have access to one while writing the paper. 
+  
 ![Timings with cores](https://github.com/balikasg/WassersteinForDocuments/blob/master/timing.png)
