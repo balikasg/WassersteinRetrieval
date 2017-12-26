@@ -13,7 +13,7 @@ git clone https://github.com/balikasg/WassersteinRetrieval
 cd WassersteinRetrieval
 bash get_embeddings.sh
 ```
-This will take some time, and it will output informative messages for its progress. It will create two files: `concept_net_1706.300.en` and `concept_net_1706.300.fr`, the containing the English and French word embeddings respectively. 
+This will take some time as it downloads the embeddings (1.1GB compressed), uncompresses it, filters English and French embeddings and removes the files that are not needed. It will output informative messages for its progress. It will create two files: `concept_net_1706.300.en` and `concept_net_1706.300.fr`, the containing the English and French word embeddings respectively. The scripts can be improved to read from the compressed file directly using pythons `gzip` module if need be.
 
 To run the cross-lingual retrieval experiments, run:
 ```
