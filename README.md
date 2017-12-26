@@ -11,7 +11,7 @@ To run the code, one first needs to download the [Numberbatch](https://github.co
 ```
 git clone https://github.com/balikasg/WassersteinRetrieval
 cd WassersteinRetrieval
-bash get_Embeddings.sh
+bash get_embeddings.sh
 ```
 This will take some time, and it will output informative messages for its progress. It will create two files: `concept_net_1706.300.en` and `concept_net_1706.300.fr`, the containing the English and French word embeddings respectively. 
 
