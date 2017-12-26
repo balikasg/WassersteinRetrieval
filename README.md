@@ -5,6 +5,21 @@ The implementations heavily rely on:
 - [Python Optimal Transport (POT)](https://github.com/rflamary/POT) for calculating the wasserstein distances
 - [Scikit-learn](http://scikit-learn.org/stable/)  for extending the nearest neighbors classifier to provide a generic framework for using out method.
 
+# Running the code
+To run the code, one first needs to download the [Numberbatch](https://github.com/commonsense/conceptnet-numberbatch) embeddings we used in this paper. We provide a script to download the embeddings and extract those for a subset of languages, e.g., English and French. To do that, first clone the repository, move the the directory and execute the script:
+
+```
+git clone https://github.com/balikasg/WassersteinRetrieval
+cd WassersteinRetrieval
+bash getEmbeddings.sh
+```
+This will take some time, and it will output informative messages for its progress. It will create two files: `concept_net_1706.300.en` and `concept_net_1706.300.fr`, the containing the English and French word embeddings respectively. 
+
+To run the cross-lingual retrieval experiments, run:
+```
+python emd.py concept_net_1706.300.en concept_net_1706.300.fr wiki_data/wikicomp.enfr.2k.en wiki_data/wikicomp.enfr.2k.fr 500 french
+```
+This runs the `emd.py` program with several arguments. The first two stand for the embeddings, the second two for the datasets where retrieval is performed, the fifth for the upper limit of words to be kept for each document (we used 500 for efficiency) and the last one for the second language (by default the first is english).
 
 
 # Citing
