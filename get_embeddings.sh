@@ -10,7 +10,6 @@ echo "Done!"
 echo 
 echo
 echo 
-python emd.py concept_net_1706.300.en concept_net_1706.300.fr wiki_data/wikicomp.enfr.2k.en wiki_data/wikicomp.enfr.2k.fr 500 french
 
 
 
