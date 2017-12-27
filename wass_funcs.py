@@ -95,7 +95,7 @@ class WassersteinDistances(KNeighborsClassifier):
         bow_i = X_train[i, union_idx].A.ravel()
         bow_j = row[:, union_idx].A.ravel()
         if self.sinkhorn:
-            return  ot.sinkhorn2(bow_i, bow_j, W_dist, sinkhorn_reg, numItermax=50, method='sinkhorn_stabilized',)[0]
+            return  ot.sinkhorn2(bow_i, bow_j, W_dist, self.sinkhorn_reg, numItermax=50, method='sinkhorn_stabilized',)[0]
         else:
             return  ot.emd2(bow_i, bow_j, W_dist)
 
