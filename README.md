@@ -27,7 +27,7 @@ In case you use the model or the provided code, please cite our paper:
 ```
 @InProceedings{balikas2018ecir,
   author    = {Georgios Balikas and Charlotte Laclau and Ievgen Redko and Massih-Reza Amini},
-  title     = {Fast Cross-lingual Document Retrieval using Regularized Wasserstein Distance},
+  title     = {Cross-lingual Document Retrieval using Regularized Wasserstein Distance},
   booktitle = {Proceedings of the 40th European Conference {ECIR} conference on Information Retrieval, {ECIR} 2018, Grenoble, France, March 26-29, 2018},
   year      = {2018}}
 ```
